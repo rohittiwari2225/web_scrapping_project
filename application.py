@@ -71,7 +71,7 @@ def index():
                 mydict = {"Product": searchString, "Name": name, "Rating": rating, "CommentHead": commentHead,
                           "Comment": custComment}
                 reviews.append(mydict)
-            client = pymongo.MongoClient("")
+            client = pymongo.MongoClient("mongodb+srv://rohit:<22rohit#*>@cluster0.gaadk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
             db = client['review_scrap']
             review_col = db['review_scrap_data']
             review_col.insert_many(reviews)
